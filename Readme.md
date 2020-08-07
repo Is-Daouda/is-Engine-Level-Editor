@@ -1,15 +1,17 @@
 # is::Level Editor
 
-Level editor of the game engine [is::Engine](https://github.com/Is-Daouda/is-Engine). It was created with the is::Engine. This tool allows you to create your own levels and to be able to integrate it into the game engine. You can also adapt it to use it for your own game.
+Level editor of the **[Game Engine Demo](https://github.com/Is-Daouda/is-Engine-Demo)**. It was created with the **[is::Engine]](https://github.com/Is-Daouda/is-Engine)**. This tool allows you to create your own levels and to be able to integrate it into the game engine demo. You can also adapt it to use it for your own game.
 In this directory you have the source code of the project, the Windows executable and the user guide.
 
 **Please consult the user guide to learn how to use the Level editor.**
+
+![image](./images/demo_screen.png)
 
 ## Prerequisites
 - SFML Library (2.4 +)
 
 **CodeBlocks**
-- Install Code::Blocks (17.12)
+- Install Code::Blocks (20.03)
 - GCC Compiler
 
 ## Contribute

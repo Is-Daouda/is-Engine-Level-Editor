@@ -81,6 +81,7 @@ void Cursor::step(float const &DELTA_TIME, int const &levelW, int const &levelH)
         if (m_tileNum > (m_tileMin + (m_tileMax - 1))) m_tileNum = (m_tileMin + (m_tileMax - 1));
         m_frame = static_cast<float>(m_tileNum - m_tileMin);
     }
+    else m_frame = 0.f;
 
     is::setFrame(m_sprParent, m_frame, m_tileMax, 32, 32, 32);
     is::setSFMLObjX_Y(m_sprParent, m_x, m_y);

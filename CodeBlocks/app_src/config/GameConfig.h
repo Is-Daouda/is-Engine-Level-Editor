@@ -59,7 +59,7 @@ namespace GameConfig
     static const std::wstring MINOR = L"0"; ///< Game minor version
     inline std::wstring getGameVersion() {return MAJOR + L"." + MINOR;} ///< return version of the game
 
-    static std::wstring const GAME_NAME     = L"is::Level Editor"; ///< Windows title name
+    static std::wstring const GAME_NAME     = L"\t is::Engine\n  Level Editor"; ///< Windows title name
     static std::wstring const GAME_AUTHOR   = L"Is Daouda";
 
     #if defined(IS_ENGINE_USE_ADMOB)
