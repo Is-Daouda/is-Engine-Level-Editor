@@ -1,4 +1,4 @@
-# is::Level Editor
+# is::Engine Level Editor
 
 Level editor of the **[Game Engine Demo](https://github.com/Is-Daouda/is-Engine-Demo)**. It was created with the **[is::Engine]](https://github.com/Is-Daouda/is-Engine)**. This tool allows you to create your own levels and to be able to integrate it into the game engine demo. You can also adapt it to use it for your own game.
 In this directory you have the source code of the project, the Windows executable and the user guide.
