@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="is-Engine-linux" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin-codeblocks/Debug/is-Engine-linux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++17" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="sfml-audio" />
+					<Add library="sfml-network" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin-codeblocks/Release/is-Engine-linux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++17" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="sfml-audio" />
+					<Add library="sfml-network" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++17" />
+		</Compiler>
+		<Unit filename="cpp/app_src/activity/GameActivity.h" />
+		<Unit filename="cpp/app_src/activity/SwooshFiles.h" />
+		<Unit filename="cpp/app_src/config/GameConfig.h" />
+		<Unit filename="cpp/app_src/gamesystem_ext/GameSystemExtended.cpp" />
+		<Unit filename="cpp/app_src/gamesystem_ext/GameSystemExtended.h" />
+		<Unit filename="cpp/app_src/language/GameLanguage.h" />
+		<Unit filename="cpp/app_src/objects/widgets/Cursor.cpp" />
+		<Unit filename="cpp/app_src/objects/widgets/Cursor.h" />
+		<Unit filename="cpp/app_src/objects/widgets/GridCase.cpp" />
+		<Unit filename="cpp/app_src/objects/widgets/GridCase.h" />
+		<Unit filename="cpp/app_src/objects/widgets/Tile.cpp" />
+		<Unit filename="cpp/app_src/objects/widgets/Tile.h" />
+		<Unit filename="cpp/app_src/scenes/Intro/Intro.cpp" />
+		<Unit filename="cpp/app_src/scenes/Intro/Intro.h" />
+		<Unit filename="cpp/app_src/scenes/LevelEditor/LevelEditor.h" />
+		<Unit filename="cpp/app_src/scenes/LevelEditor/LevelEditorConstructor.cpp" />
+		<Unit filename="cpp/app_src/scenes/LevelEditor/LevelEditorDraw.cpp" />
+		<Unit filename="cpp/app_src/scenes/LevelEditor/LevelEditorLoadResource.cpp" />
+		<Unit filename="cpp/app_src/scenes/LevelEditor/LevelEditorStep.cpp" />
+		<Unit filename="cpp/app_src/scenes/LevelEditor/LevelEditorStepSubFunction.cpp" />
+		<Unit filename="cpp/app_src/scenes/MainMenu/MainMenu.cpp" />
+		<Unit filename="cpp/app_src/scenes/MainMenu/MainMenu.h" />
+		<Unit filename="cpp/app_src/scenes/MainMenu/MainMenuDraw.cpp" />
+		<Unit filename="cpp/app_src/scenes/MainMenu/MainMenuLoadResource.cpp" />
+		<Unit filename="cpp/basicSFMLmain.cpp" />
+		<Unit filename="cpp/isEngine/core/GameEngine.cpp" />
+		<Unit filename="cpp/isEngine/core/GameEngine.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/BlackWashFade.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/BlendFadeIn.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/BlurFadeIn.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/Checkerboard.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/CircleClose.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/CircleOpen.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/CrossZoom.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/Cube3D.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/DiamondTileCircle.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/DiamondTileSwipe.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/HorizontalOpen.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/HorizontalSlice.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/Morph.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/PageTurn.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/PixelateBlackWashFade.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/PushIn.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/RadialCCW.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/RetroBlit.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/SlideIn.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/SwipeIn.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/VerticalOpen.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/VerticalSlice.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/WhiteWashFade.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/ZoomFadeIn.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/ZoomFadeInBounce.cpp" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/ZoomFadeInBounce.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/ZoomIn.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Segues/ZoomOut.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Swoosh/ActionList.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Swoosh/Activity.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Swoosh/ActivityController.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Swoosh/Ease.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Swoosh/EmbedGLSL.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Swoosh/Game.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Swoosh/Segue.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Swoosh/Shaders.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/Swoosh/Timer.h" />
+		<Unit filename="cpp/isEngine/ext_lib/Swoosh/do_not_copy/data/checkerboard.png.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cpp/isEngine/ext_lib/TinyFileDialogs/TinyDialogBox.h" />
+		<Unit filename="cpp/isEngine/ext_lib/TinyFileDialogs/tinyfiledialogs.cpp" />
+		<Unit filename="cpp/isEngine/ext_lib/TinyFileDialogs/tinyfiledialogs.h" />
+		<Unit filename="cpp/isEngine/system/android/AdmobManager.h" />
+		<Unit filename="cpp/isEngine/system/display/GameDisplay.cpp" />
+		<Unit filename="cpp/isEngine/system/display/GameDisplay.h" />
+		<Unit filename="cpp/isEngine/system/display/SDM.h" />
+		<Unit filename="cpp/isEngine/system/entity/Background.h" />
+		<Unit filename="cpp/isEngine/system/entity/Button.h" />
+		<Unit filename="cpp/isEngine/system/entity/Form.h" />
+		<Unit filename="cpp/isEngine/system/entity/MainObject.cpp" />
+		<Unit filename="cpp/isEngine/system/entity/MainObject.h" />
+		<Unit filename="cpp/isEngine/system/entity/parents/DepthObject.h" />
+		<Unit filename="cpp/isEngine/system/entity/parents/Destructible.h" />
+		<Unit filename="cpp/isEngine/system/entity/parents/FilePath.h" />
+		<Unit filename="cpp/isEngine/system/entity/parents/Health.h" />
+		<Unit filename="cpp/isEngine/system/entity/parents/HurtEffect.h" />
+		<Unit filename="cpp/isEngine/system/entity/parents/Name.h" />
+		<Unit filename="cpp/isEngine/system/entity/parents/ScorePoint.h" />
+		<Unit filename="cpp/isEngine/system/entity/parents/Step.h" />
+		<Unit filename="cpp/isEngine/system/entity/parents/Type.h" />
+		<Unit filename="cpp/isEngine/system/entity/parents/Visibilty.h" />
+		<Unit filename="cpp/isEngine/system/function/GameFunction.cpp" />
+		<Unit filename="cpp/isEngine/system/function/GameFunction.h" />
+		<Unit filename="cpp/isEngine/system/function/GameKeyData.cpp" />
+		<Unit filename="cpp/isEngine/system/function/GameKeyData.h" />
+		<Unit filename="cpp/isEngine/system/function/GameKeyName.h" />
+		<Unit filename="cpp/isEngine/system/function/GameSystem.cpp" />
+		<Unit filename="cpp/isEngine/system/function/GameSystem.h" />
+		<Unit filename="cpp/isEngine/system/function/GameTime.cpp" />
+		<Unit filename="cpp/isEngine/system/function/GameTime.h" />
+		<Unit filename="cpp/isEngine/system/sound/GSM.h" />
+		<Unit filename="cpp/isEngine/system/sound/GameMusic.h" />
+		<Unit filename="cpp/isEngine/system/sound/GameSound.h" />
+		<Unit filename="cpp/main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
