@@ -121,7 +121,7 @@ codeblocks "./app/src/main/is-Engine-linux.cbp"
 
 ## Change application icon:
 #### Windows
-- To change the icon of the application you must go to the location **[is-Engine-Level-Editor/app/src/main/env/windows](./app/src/main/env/windows)**** replace all the images **(Attention CMake uses the same resources).**
+- To change the icon of the application you must go to the location **[is-Engine-Level-Editor/app/src/main/env/windows](./app/src/main/env/windows)** replace all the images **(Attention CMake uses the same resources).**
 
 #### Linux
 - To change the icon of the application you must go to the location **[is-Engine-Level-Editor/app/src/main/env/linux](./app/src/main/env/linux)**.
