@@ -36,6 +36,7 @@ public:
         m_tileMin = m_tileNum;
         m_tileMax = (tex->getSize().x / 32); // get number of sub image
         m_sprParent.setTexture((*tex));
+        m_sprParent.setTextureRect(sf::IntRect(0, 0, 32, 32));
         m_clearTile = false;
     }
     void setBlockTile()

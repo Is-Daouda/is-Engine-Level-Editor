@@ -1,11 +1,11 @@
 #include "MainMenu.h"
 
-MainMenu::MainMenu(sf::RenderWindow &window, sf::View &view, sf::RenderTexture &surface, is::GameSystemExtended &gameSysExt):
-    GameDisplay(window, view, surface, gameSysExt, sf::Color::White),
+MainMenu::MainMenu(is::GameSystemExtended &gameSysExt):
+    GameDisplay(gameSysExt, sf::Color::White),
     m_gameOptionIndex(0),
     m_oscillation(0.f),
-    m_xPos(38.f),
-    m_yPos(210.f),
+    m_xPos(124.f),
+    m_yPos(234.f),
     m_bgX(0.f),
     m_bgY(0.f),
     m_sprButtonPemuteScale(1.f),
@@ -29,7 +29,7 @@ void MainMenu::step()
 {
     DELTA_TIME = getDeltaTime();
 
-    updateTimeWait(DELTA_TIME);
+    updateTimeWait();
 
     const short OP_START_GAME(0),
                 OP_CONTINUE(1);

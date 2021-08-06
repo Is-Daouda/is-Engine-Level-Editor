@@ -3,15 +3,13 @@
 
 #include <memory>
 
-#include "../../../isEngine/system/function/GameFunction.h"
 #include "../../../isEngine/system/display/GameDisplay.h"
 #include "../../../isEngine/ext_lib/TinyFileDialogs/TinyDialogBox.h"
-#include "../../language/GameLanguage.h"
 
 class MainMenu : public is::GameDisplay
 {
 public:
-    MainMenu(sf::RenderWindow &window, sf::View &view, sf::RenderTexture &surface, is::GameSystemExtended &gameSysExt);
+    MainMenu(is::GameSystemExtended &gameSysExt);
     virtual ~MainMenu();
 
     void step();
@@ -20,10 +18,6 @@ public:
     void loadResources();
 
 private:
-    sf::Font m_fontTitle;
-
-    sf::Texture m_texPad, m_texPad2, m_texScreenBG;
-
     sf::Sprite m_sprPad1, m_sprPad2, m_sprScreenBG;
 
     sf::Text m_txtGameTitle, m_txtStartGame, m_txtContinue;

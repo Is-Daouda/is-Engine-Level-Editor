@@ -2,8 +2,8 @@
 
 namespace is
 {
-GameSystemExtended::GameSystemExtended() :
-    GameSystem()
+GameSystemExtended::GameSystemExtended(sf::RenderWindow &window) :
+    GameSystem(window)
 {
     m_enableLoadTex = false;
     m_enableAutoSave = true;

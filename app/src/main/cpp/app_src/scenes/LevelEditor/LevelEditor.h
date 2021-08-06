@@ -1,13 +1,10 @@
 #ifndef LEVELEDITOR_H
 #define LEVELEDITOR_H
 
-#include <memory>
-
 #include "../../../isEngine/system/display/GameDisplay.h"
 #include "../../../isEngine/system/function/GameTime.h"
 #include "../../../isEngine/ext_lib/TinyFileDialogs/TinyDialogBox.h"
 
-#include "../../language/GameLanguage.h"
 #include "../../objects/widgets/Tile.h"
 #include "../../objects/widgets/GridCase.h"
 #include "../../objects/widgets/Cursor.h"
@@ -19,7 +16,7 @@
 class LevelEditor : public is::GameDisplay
 {
 public:
-    LevelEditor(sf::RenderWindow &window, sf::View &swooshView, sf::RenderTexture &surface, is::GameSystemExtended &gameSysExt);
+    LevelEditor(is::GameSystemExtended &gameSysExt);
     ~LevelEditor();
 
     void createGridCase();
@@ -61,10 +58,8 @@ private:
                 m_texTilesPath, m_texEnemyPath, m_texBonusPath;
     std::string m_levelName;
 
-    sf::Texture m_texPad, m_texToolsPad;
-    sf::Texture m_texCursor, m_texBlock, m_texPlayer, m_texGameplay, m_texTiles, m_texEnemy, m_texBonus;
+    sf::Texture m_texBlock, m_texPlayer, m_texGameplay, m_texTiles, m_texEnemy, m_texBonus;
 
-    sf::Texture m_texGridCaseBg;
     sf::Sprite m_sprGridCaseBg;
 
     sf::RectangleShape m_recItemMenuList[11];

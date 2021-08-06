@@ -4,7 +4,7 @@ void LevelEditor::step()
 {
     DELTA_TIME = getDeltaTime();
 
-    updateTimeWait(DELTA_TIME);
+    updateTimeWait();
 
     // even loop
     sf::Event event;
@@ -25,7 +25,7 @@ void LevelEditor::step()
     }
 
     // auto save
-    m_gameTime.step(DELTA_TIME, is::VALUE_CONVERSION, is::VALUE_TIME);
+    m_gameTime.step(DELTA_TIME);
     if (m_gameTime.getTimeValue() == 0)
     {
         if (m_levelIsChanged) saveLevelEditor(true);

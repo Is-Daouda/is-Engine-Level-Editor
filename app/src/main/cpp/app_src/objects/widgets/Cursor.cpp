@@ -83,7 +83,7 @@ void Cursor::step(float const &DELTA_TIME, int const &levelW, int const &levelH)
     }
     else m_frame = 0.f;
 
-    is::setFrame(m_sprParent, m_frame, m_tileMax, 32, 32, 32);
+    is::setFrame(m_sprParent, m_frame, m_tileMax, 32, 32, 32, 32);
     is::setSFMLObjX_Y(m_sprParent, m_x, m_y);
     updateCollisionMask();
 }

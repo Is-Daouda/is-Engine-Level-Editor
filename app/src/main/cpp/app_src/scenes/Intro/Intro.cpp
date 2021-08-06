@@ -1,7 +1,7 @@
 #include "Intro.h"
 
-Intro::Intro(sf::RenderWindow &window, sf::View &view, sf::RenderTexture &surface, is::GameSystemExtended &gameSysExt):
-    GameDisplay(window, view, surface, gameSysExt, sf::Color::White),
+Intro::Intro(is::GameSystemExtended &gameSysExt):
+    GameDisplay(gameSysExt, sf::Color::White),
     Step(),
     m_recScale(0.f),
     m_isOnPad(false)
@@ -24,7 +24,7 @@ void Intro::step()
 
     if (m_windowIsActive)
     {
-        updateTimeWait(DELTA_TIME);
+        updateTimeWait();
 
         // intro step
         switch(m_step)
@@ -58,7 +58,6 @@ void Intro::step()
                         (m_waitTime == 0 && !m_gameSysExt.m_keyIsPressed))
                     {
                         GSMplaySound("select_option");
-                        m_gameSysExt.useVibrate(m_vibrateTimeDuration);
                         m_gameSysExt.m_gameLanguage = m_optionIndex;
                         m_gameSysExt.m_firstLaunch = false;
                         m_gameSysExt.saveConfig(is::GameConfig::CONFIG_FILE);
@@ -95,20 +94,18 @@ void Intro::loadResources()
 
     if (m_gameSysExt.m_firstLaunch)
     {
-        is::loadSFMLObjResource(m_texPad, is::GameConfig::GUI_DIR + "main_menu_pad.png");
-        is::loadSFMLObjResource(m_fontTitle, is::GameConfig::FONT_DIR + "space_ranger_3d_mp_pv.otf");
+        auto &pad = GRMaddTexture("pad", is::GameConfig::GUI_DIR + "main_menu_pad.png");
+        auto &font = GRMaddFont("font_title", is::GameConfig::FONT_DIR + "space_ranger_3d_mp_pv.otf");
 
-        is::createWText(m_fontTitle, m_txtChooseLanguage, L"Choose Language", 0.f, 0.f, sf::Color(255, 255, 255), 48);
-        is::centerSFMLObj(m_txtChooseLanguage);
-        is::setSFMLObjX_Y(m_txtChooseLanguage, m_viewX, m_viewY - 90.f);
+        is::createText(font, m_txtChooseLanguage, "Choose Language", m_viewX, m_viewY - 90.f, sf::Color(255, 255, 255), true, 48);
 
         // create sprites
-        float btX(230.f), btY(205.f);
-        is::createSprite(m_texPad, m_sprButtonSelect, sf::IntRect(192, 0, 192, 48), sf::Vector2f(btX, btY), sf::Vector2f(96.f, 24.f));
-        is::createSprite(m_texPad, m_sprPadFr, sf::IntRect(192, 0, 192, 48), sf::Vector2f(btX, btY + 66.f), sf::Vector2f(96.f, 24.f));
-        is::createText(m_fontSystem, m_txtLangEng, is::lang::pad_game_language[is::lang::GameLanguage::ENGLISH],
+        float btX(326.f), btY(229.f);
+        is::createSprite(pad, m_sprButtonSelect, sf::IntRect(192, 0, 192, 48), sf::Vector2f(btX, btY), sf::Vector2f(96.f, 24.f));
+        is::createSprite(pad, m_sprPadFr, sf::IntRect(192, 0, 192, 48), sf::Vector2f(btX, btY + 66.f), sf::Vector2f(96.f, 24.f));
+        is::createText(getFontSystem(), m_txtLangEng, is::lang::pad_game_language[is::lang::GameLanguage::ENGLISH],
                        is::getSFMLObjX(m_sprButtonSelect), is::getSFMLObjY(m_sprButtonSelect) - 6.f, sf::Color(255, 255, 255), true, 25);
-        is::createText(m_fontSystem, m_txtLangFr, is::lang::pad_game_language[is::lang::GameLanguage::FRANCAIS],
+        is::createText(getFontSystem(), m_txtLangFr, is::lang::pad_game_language[is::lang::GameLanguage::FRANCAIS],
                        is::getSFMLObjX(m_sprPadFr), is::getSFMLObjY(m_sprPadFr) - 6.f, sf::Color(255, 255, 255), true, 25);
     }
     else

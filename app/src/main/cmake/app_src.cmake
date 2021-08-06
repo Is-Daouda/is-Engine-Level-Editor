@@ -16,9 +16,6 @@ set(
 	${ISENGINE_SRC_DIR}/app_src/scenes/MainMenu/MainMenuDraw.cpp
 	${ISENGINE_SRC_DIR}/app_src/scenes/MainMenu/MainMenuLoadResource.cpp
 
-	# game objects
-	# app_src/objects/...
-
 	# widgets
 	${ISENGINE_SRC_DIR}/app_src/objects/widgets/Cursor.cpp
 	${ISENGINE_SRC_DIR}/app_src/objects/widgets/GridCase.cpp

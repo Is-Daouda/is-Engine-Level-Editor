@@ -1,12 +1,13 @@
 cmake_minimum_required (VERSION 3.1) 
 
-project(is_engine_level_editor)
+project(isengine)
 
+set(ISENGINE_PC true) # This confirms that we are using is::Engine to develop on PC (Windows / Linux)
+set(ISENGINE_MAIN_DIR  "${CMAKE_CURRENT_SOURCE_DIR}/app/src/main")
+set(ISENGINE_SRC_DIR   "${CMAKE_CURRENT_SOURCE_DIR}/app/src/main/cpp")
+set(ISENGINE_CMAKE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/app/src/main/cmake")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY bin)
-set(ISENGINE_MAIN_DIR "${CMAKE_CURRENT_SOURCE_DIR}/app/src/main")
-set(ISENGINE_SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/app/src/main/cpp")
-set(ISENGINE_CMAKE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/app/src/main/cmake")
 
 # SFML on Windows OS
 if (WIN32)
@@ -26,11 +27,11 @@ include(${ISENGINE_CMAKE_DIR}/app_src.cmake)
 # game resources files (image, sound, music, ...)
 file(COPY ${ISENGINE_MAIN_DIR}/assets DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 
-add_executable(is_engine_level_editor
+add_executable(isengine
     ${isengine}
 	${app_src}
 	${ISENGINE_CMAKE_DIR}/resource.rc # application icon
 )
 
-target_include_directories(is_engine_level_editor PRIVATE include)
-target_link_libraries(is_engine_level_editor sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
+target_include_directories(isengine PRIVATE include)
+target_link_libraries(isengine sfml-system sfml-window sfml-graphics sfml-network sfml-audio)

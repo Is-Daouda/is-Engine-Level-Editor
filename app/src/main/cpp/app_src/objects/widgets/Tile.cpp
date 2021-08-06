@@ -6,7 +6,7 @@ Tile::Tile(sf::Texture &tex, int tileNum, int tileMin, float x, float y) :
     m_tileNum = tileNum;
     m_sprParent.setTexture(tex);
     is::setSFMLObjX_Y(m_sprParent, x, y);
-    is::setFrame(m_sprParent, m_tileNum - tileMin, (tex.getSize().x / 32), 32, 32, 32);
+    is::setFrame(m_sprParent, m_tileNum - tileMin, (tex.getSize().x / 32), 32, 32, 32, 32);
 }
 
 void Tile::showError(sf::Texture &tex)

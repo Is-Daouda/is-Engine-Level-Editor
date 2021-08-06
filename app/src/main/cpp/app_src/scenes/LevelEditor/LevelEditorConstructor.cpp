@@ -1,7 +1,7 @@
 #include "LevelEditor.h"
 
-LevelEditor::LevelEditor(sf::RenderWindow &window, sf::View &view, sf::RenderTexture &surface, is::GameSystemExtended &gameSysExt):
-    GameDisplay(window, view, surface, gameSysExt, sf::Color(220, 220, 220)),
+LevelEditor::LevelEditor(is::GameSystemExtended &gameSysExt):
+    GameDisplay(gameSysExt, sf::Color(220, 220, 220)),
     AUTO_SAVE_MINUTE(2),
     m_gameTime(AUTO_SAVE_MINUTE, 0, 0), // save the level every AUTO_SAVE_MINUTE minutes
     m_cursor(this),

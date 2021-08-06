@@ -11,6 +11,8 @@ void LevelEditor::gamePlay()
     }
     m_cursor.step(DELTA_TIME, m_levelWidth, m_levelHeight);
 
+    is::setSFMLObjX_Y(m_sprGridCaseBg, m_viewX - 320.f, m_viewY - 240.f);
+
     // when user right mouse button clicked
     if (!m_gameSysExt.isPressed() &&
         !m_gameSysExt.keyIsPressed(sf::Keyboard::Left) &&
@@ -136,7 +138,7 @@ void LevelEditor::gamePlay()
             {
                 if (!m_levelIsChanged)
                 {
-                    m_window.setTitle(is::GameConfig::GAME_NAME + L"*");
+                    m_window.setTitle(is::GameConfig::GAME_NAME + "*");
                     m_levelIsChanged = true;
                 }
             };
@@ -163,7 +165,7 @@ void LevelEditor::gamePlay()
                             // insert tile num in grid case
                             if (!(*it)->insertTileNum(m_cursor.m_tileNum, m_cursor.m_tileMin))
                             {
-                                t->showError(m_texCursor);
+                                t->showError(GRMgetTexture("cursor"));
                                 GSMplaySound("cancel");
                             }
                             else

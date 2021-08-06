@@ -1,9 +1,8 @@
 #ifndef GAMESYSTEMEXTENDED_H_INCLUDED
 #define GAMESYSTEMEXTENDED_H_INCLUDED
 
-#include "../../isEngine/system/function/GameFunction.h"
+#include "../../isEngine/system/function/GameSystem.h"
 #include "../../isEngine/ext_lib/TinyFileDialogs/TinyDialogBox.h"
-#include "../config/GameConfig.h"
 
 ////////////////////////////////////////////////////////////
 /// \brief Class derived from GameSystem to manage the
@@ -15,10 +14,10 @@
 ////////////////////////////////////////////////////////////
 namespace is
 {
-class GameSystemExtended : public is::GameSystem
+class GameSystemExtended : public GameSystem
 {
 public:
-    GameSystemExtended();
+    GameSystemExtended(sf::RenderWindow &window);
 
     /// Initialize the data link to the game engine
     void initSystemData();
@@ -73,7 +72,6 @@ public:
     bool  m_enableAutoSave;
     std::string m_filePath;
 };
-
 }
 
 #endif // GAMESYSTEMEXTENDED_H_INCLUDED
