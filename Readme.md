@@ -8,6 +8,7 @@ Level editor of the **[Game Engine Demo](https://github.com/Is-Daouda/is-Engine-
 ## Prerequisites
 - [SFML Library (2.4 +)](https://www.sfml-dev.org/download.php)
 - GCC Compiler (7.3 +)
+- SDL 2 (optional)
 
 ---
 
@@ -132,7 +133,7 @@ codeblocks "./app/src/main/is-Engine-linux.cbp"
 
 ---
 
-## ![cb](https://i48.servimg.com/u/f48/20/16/75/27/icon_c10.png) Develop SFML games with SDL 2
+## ![cb](https://i48.servimg.com/u/f48/20/16/75/27/icon_c10.png) Develop with SDL 2
 
 **1. Installation**
 #### Windows
