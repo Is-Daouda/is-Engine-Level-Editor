@@ -194,31 +194,6 @@ Contains the source code of the game engine
 
 ---
 
-## Special things to know about the engine
-### is::LibConnect
-With the is::LibConnect you can write code for a specific library. Here is how to do it:
-```cpp
-sf::Text text;
-text.setString(
-// on PC (Windows / Linux)
-#if define(IS_ENGINE_SFML)    
-    "We use SFML 2 library"
-
-// on Android or when you use SDL to create SFML games on PC (only for Code::Block at the moment)    
-#elif define(IS_ENGINE_SDL_2)
-    "Run SFML 2 with SDL 2"
-
-// When we develop for the web (HTML 5) with Emscripten    
-#elif define(IS_ENGINE_HTML_5)
-    "SFML 2 on Web"
-#endif
-              );
-```
-
-#### If you have discovered another way to use the game engine, don't hesitate to share it! We will put it in this Special section so that other people can benefit from it!
-
----
-
 ## How to update an is::Engine project
 1. First of all the part of is::Engine that changes most often during updates is the [isEngine](./app/src/main/cpp/isEngine/) folder. But it also happens that these files can be modified:
 - [GameActivity.h](./app/src/main/cpp/app_src/activity/GameActivity.h)
