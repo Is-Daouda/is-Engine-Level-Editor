@@ -3,7 +3,7 @@ Level editor of the **[Game Engine Demo](https://github.com/Is-Daouda/is-Engine-
 
 **Please consult the [user guide](./doc/) to learn how to use the Level editor.**
 
-![Image](./images/Level-Editor_screen.png)
+![Image](./images/demo_screen.png)
 
 ## Prerequisites
 - [SFML Library (2.4 +)](https://www.sfml-dev.org/download.php)
