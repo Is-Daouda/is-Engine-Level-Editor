@@ -58,7 +58,7 @@ public:
 
     /// default filter patterns
     tinyString TINY_FILTER_PATTERNS[2] = {
-                                             #if !defined(SFML_SYSTEM_LINUX)
+                                             #if !defined(SFML_SYSTEM_LINUX) && !defined(IS_ENGINE_LINUX)
                                              L"*.sav", L"*.save"
                                              #else
                                              "*.sav", "*.save"

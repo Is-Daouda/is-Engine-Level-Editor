@@ -71,16 +71,7 @@ static std::wstring pad_quit_editor[] = {L"Quit", L"Quitter"};
 static std::wstring msg_reload_map[] = {L"Reload level?",
                                             L"Recharger le niveau?"};
 static std::wstring msg_quit_editor[] = {L"Quit Editor?\n(Data not saved will be lost)",
-                                            L"Quitter l'Editeur?\n(Les données non sauvegardées\n"
-                                             "seront perdues)"};
-
-// ------------------------ game over ------------------------
-static std::wstring game_over[] = {L"Game Over", L"Partie Terminée"};
-
-// ------------------------ game end ------------------------
-static std::wstring end_msg_congrat[] = {L"Congratulation", L"Félicitation"};
-static std::wstring end_msg_sentences[] = {L"\t\t  End of the Demo, Thanks for playing.\n",
-                                                  L"\t\t   Fin de la Démo, Merci d’avoir joué."};
+                                            L"Quitter l'Editeur?"};
 }
 }
 #endif // GAMELANGUAGE_H_INCLUDED

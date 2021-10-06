@@ -9,7 +9,7 @@
 #include "../../objects/widgets/GridCase.h"
 #include "../../objects/widgets/Cursor.h"
 
-#if !defined(SFML_SYSTEM_LINUX)
+#if !defined(SFML_SYSTEM_LINUX) && !defined(IS_ENGINE_LINUX)
 #include <windows.h>
 #endif
 

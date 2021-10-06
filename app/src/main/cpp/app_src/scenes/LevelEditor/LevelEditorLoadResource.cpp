@@ -39,13 +39,13 @@ void LevelEditor::loadResources()
         is::createRectangle(m_recItemMenuList[i],
                             sf::Vector2f((m_gameSysExt.m_gameLanguage == is::lang::FRANCAIS) ? 164.f : 152.f, 30.f),
                             sf::Color::White);
-        is::setSFMLObjOutlineColor(m_recItemMenuList[i], 0.5f, sf::Color::Black);
+        is::setSFMLObjOutlineColor(m_recItemMenuList[i], sf::Color::Black, 0.5f);
     }
 
-    auto &toolPad = GRMaddTexture("tools_pad", is::GameConfig::GUI_DIR + "tools_pad.png");
+    GRMaddTexture("tools_pad", is::GameConfig::GUI_DIR + "tools_pad.png");
 
     // GUI resources
-    auto &pad = GRMaddTexture("pad", is::GameConfig::GUI_DIR + "option_pad.png");
+    GRMaddTexture("pad", is::GameConfig::GUI_DIR + "option_pad.png");
 
     // sprites
     auto &cursor = GRMaddTexture("cursor", is::GameConfig::SPRITES_DIR + "cursor.png");
@@ -73,7 +73,7 @@ void LevelEditor::loadResources()
     // set level data
     if (!loadLevelEditor())
     {
-    	#if !defined(SFML_SYSTEM_LINUX)
+    	#if !defined(SFML_SYSTEM_LINUX) && !defined(IS_ENGINE_LINUX)
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);
         #endif
         is::showLog("\n------------------------------------------------------------------");
@@ -110,7 +110,7 @@ void LevelEditor::loadResources()
                                                  is::TinyDialogBox::IconType::QUESTION) == 1)
             {
                 tinyString lFilterPatterns[2] = {
-                                                #if !defined(SFML_SYSTEM_LINUX)
+                                                #if !defined(SFML_SYSTEM_LINUX) && !defined(IS_ENGINE_LINUX)
                                                 L"*.png", L"*.PNG"
                                                 #else
                                                 "*.png", "*.PNG"
@@ -152,7 +152,7 @@ void LevelEditor::loadResources()
         if (m_levelWidth < m_viewW / 32) m_levelWidth = m_viewW / 32;
         if (m_levelHeight < m_viewH / 32) m_levelHeight = m_viewH / 32;
         createGridCase();
-        #if !defined(SFML_SYSTEM_LINUX)
+        #if !defined(SFML_SYSTEM_LINUX) && !defined(IS_ENGINE_LINUX)
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
         #endif
         is::showLog("\n------------------------------------------------------------------");

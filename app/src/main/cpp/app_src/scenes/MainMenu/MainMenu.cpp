@@ -73,7 +73,7 @@ void MainMenu::step()
                     !m_gameSysExt.isPressed()) m_gameSysExt.m_keyIsPressed = false;
 
                 // m_isClose allow to deactivate scene object
-                if (!m_isClose)
+                if (!m_isClosed)
                 {
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                      MAIN MENU
@@ -96,7 +96,7 @@ void MainMenu::step()
                         case OP_START_GAME:
                             playSelectSnd();
                             m_gameSysExt.m_launchOption = is::DisplayOption::LEVEL_EDITOR;
-                            m_isClose = true;
+                            m_isClosed = true;
                         break;
 
                         // load current level saved
@@ -109,7 +109,7 @@ void MainMenu::step()
                                 if (m_gameSysExt.m_filePath != "")
                                 {
                                     m_gameSysExt.m_launchOption = is::DisplayOption::LEVEL_EDITOR;
-                                    m_isClose = true;
+                                    m_isClosed = true;
                                 }
                             }
                         break;
@@ -263,7 +263,7 @@ void MainMenu::step()
                             if (m_msgAnswer == MsgAnswer::YES)
                             {
                                 m_gameSysExt.m_launchOption = is::DisplayOption::LEVEL_EDITOR;
-                                m_isClose = true;
+                                m_isClosed = true;
                             } else m_waitTime = 20;
                         } else m_waitTime = 20;
                     }
@@ -291,7 +291,7 @@ void MainMenu::step()
     // PAD animation
     is::scaleAnimation(DELTA_TIME, m_sprButtonSelectScale, m_sprButtonSelect, m_sprPad1.getScale().x);
 
-    if (m_isClose)
+    if (m_isClosed)
     {
         m_isStart = false;
         m_isRunning = false;

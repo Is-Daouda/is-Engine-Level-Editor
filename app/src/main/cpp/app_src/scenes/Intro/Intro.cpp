@@ -97,16 +97,16 @@ void Intro::loadResources()
         auto &pad = GRMaddTexture("pad", is::GameConfig::GUI_DIR + "main_menu_pad.png");
         auto &font = GRMaddFont("font_title", is::GameConfig::FONT_DIR + "space_ranger_3d_mp_pv.otf");
 
-        is::createText(font, m_txtChooseLanguage, "Choose Language", m_viewX, m_viewY - 90.f, sf::Color(255, 255, 255), true, 48);
+        is::createText(font, m_txtChooseLanguage, "Choose Language", m_viewX, m_viewY - 64.f, sf::Color(255, 255, 255), true, 48);
 
         // create sprites
         float btX(326.f), btY(229.f);
         is::createSprite(pad, m_sprButtonSelect, sf::IntRect(192, 0, 192, 48), sf::Vector2f(btX, btY), sf::Vector2f(96.f, 24.f));
         is::createSprite(pad, m_sprPadFr, sf::IntRect(192, 0, 192, 48), sf::Vector2f(btX, btY + 66.f), sf::Vector2f(96.f, 24.f));
         is::createText(getFontSystem(), m_txtLangEng, is::lang::pad_game_language[is::lang::GameLanguage::ENGLISH],
-                       is::getSFMLObjX(m_sprButtonSelect), is::getSFMLObjY(m_sprButtonSelect) - 6.f, sf::Color(255, 255, 255), true, 25);
+                       is::getSFMLObjX(m_sprButtonSelect), is::getSFMLObjY(m_sprButtonSelect), sf::Color(255, 255, 255), true, 25);
         is::createText(getFontSystem(), m_txtLangFr, is::lang::pad_game_language[is::lang::GameLanguage::FRANCAIS],
-                       is::getSFMLObjX(m_sprPadFr), is::getSFMLObjY(m_sprPadFr) - 6.f, sf::Color(255, 255, 255), true, 25);
+                       is::getSFMLObjX(m_sprPadFr), is::getSFMLObjY(m_sprPadFr), sf::Color(255, 255, 255), true, 25);
     }
     else
     {

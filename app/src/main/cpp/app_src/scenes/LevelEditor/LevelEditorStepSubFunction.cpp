@@ -494,7 +494,7 @@ bool LevelEditor::saveMapAsCHeader()
 {
     std::string headerFilePath;
     tinyString lFilterPatterns[2] = {
-                                    #if !defined(SFML_SYSTEM_LINUX)
+                                    #if !defined(SFML_SYSTEM_LINUX) && !defined(IS_ENGINE_LINUX)
                                     L"*.h", L"*.header"
                                     #else
                                     "*.h", "*.header"

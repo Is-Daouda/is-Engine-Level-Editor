@@ -2,13 +2,13 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="is-Engine-windows" />
+		<Option title="is-Engine-linux-SDL2" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin-codeblocks/Debug/is-Engine-windows" prefix_auto="1" extension_auto="1" />
-				<Option object_output="bin-codeblocks/obj/Debug/" />
+				<Option output="bin-codeblocks/Debug/is-Engine-linux-SDL2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin-codeblocks/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -16,8 +16,8 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin-codeblocks/Release/is-Engine-windows" prefix_auto="1" extension_auto="1" />
-				<Option object_output="bin-codeblocks/obj/Release/" />
+				<Option output="bin-codeblocks/Release/is-Engine-linux-SDL2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin-codeblocks/Release/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -30,36 +30,17 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add option="-std=c17" />
+			<Add option="-std=c++17" />
+			<Add option="`sdl2-config --cflags`" />
 			<Add option="-DIS_ENGINE_SDL_2" />
-			<Add directory="C:/SDL2/x86_64-w64-mingw32/include/SDL2" />
+			<Add option="-DIS_ENGINE_LINUX" />
 		</Compiler>
 		<Linker>
-			<Add library="mingw32" />
-			<Add library="user32" />
-			<Add library="gdi32" />
-			<Add library="winmm" />
-			<Add library="dxguid" />
-			<Add library="kernel32" />
-			<Add library="comctl32" />
-			<Add library="Ole32" />
-			<Add library="comdlg32" />
-			<Add library="SDL2main" />
-			<Add library="SDL2.dll" />
-			<Add library="SDL2_image.dll" />
+			<Add option="`sdl2-config --libs`" />
 			<Add library="SDL2_image" />
-			<Add library="SDL2_mixer.dll" />
 			<Add library="SDL2_mixer" />
-			<Add library="SDL2_ttf.dll" />
 			<Add library="SDL2_ttf" />
-			<Add directory="C:/SDL2/x86_64-w64-mingw32/lib" />
 		</Linker>
-		<ExtraCommands>
-			<Add after="XCOPY $(#sdl2)\bin\*.dll $(TARGET_OUTPUT_DIR) /D /Y" />
-		</ExtraCommands>
-		<Unit filename="codeblocks/resource.rc">
-			<Option compilerVar="WINDRES" />
-		</Unit>
 		<Unit filename="cpp/app_src/activity/GameActivity.h" />
 		<Unit filename="cpp/app_src/config/ExtraConfig.h" />
 		<Unit filename="cpp/app_src/config/GameConfig.h" />
@@ -229,8 +210,6 @@
 		<Unit filename="cpp/isEngine/system/sound/GameMusic.h" />
 		<Unit filename="cpp/isEngine/system/sound/GameSound.h" />
 		<Unit filename="cpp/main.cpp" />
-		<Extensions>
-			<lib_finder disable_auto="1" />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
