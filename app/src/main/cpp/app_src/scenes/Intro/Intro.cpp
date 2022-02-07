@@ -1,4 +1,5 @@
 #include "Intro.h"
+#include "../../language/GameLanguage.h"
 
 Intro::Intro(is::GameSystemExtended &gameSysExt):
     GameDisplay(gameSysExt, sf::Color::White),

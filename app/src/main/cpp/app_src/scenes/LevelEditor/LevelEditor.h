@@ -5,6 +5,8 @@
 #include "../../../isEngine/system/function/GameTime.h"
 #include "../../../isEngine/ext_lib/TinyFileDialogs/TinyDialogBox.h"
 
+#include "../../language/GameLanguage.h"
+
 #include "../../objects/widgets/Tile.h"
 #include "../../objects/widgets/GridCase.h"
 #include "../../objects/widgets/Cursor.h"

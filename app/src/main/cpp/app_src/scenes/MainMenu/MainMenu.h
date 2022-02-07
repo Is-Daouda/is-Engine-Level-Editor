@@ -5,6 +5,7 @@
 
 #include "../../../isEngine/system/display/GameDisplay.h"
 #include "../../../isEngine/ext_lib/TinyFileDialogs/TinyDialogBox.h"
+#include "../../language/GameLanguage.h"
 
 class MainMenu : public is::GameDisplay
 {
