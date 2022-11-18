@@ -281,7 +281,7 @@ void LevelEditor::updateItemListObj()
         // menu selection texts animation
         for (unsigned int i(0); i < is::arraySize(m_txtItemMenuList); i++)
         {
-            setTextAnimation(m_txtItemMenuList[i], m_optionIndex, i);
+            is::setTextAnimation(m_txtItemMenuList[i], m_optionIndex, i);
             is::scaleAnimation(DELTA_TIME, m_itemMenuListScale[i], m_txtItemMenuList[i]);
         }
 
